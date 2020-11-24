@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './App.css';
 
-function App() {
+interface IAppProps{
+    name?: string
+}
+
+const App:FC<IAppProps> = (props)  => {
     return (
         <div className="App">
             <h1>Hello React!</h1>
+            <h2>{props.name}</h2>
             <p>Nice TDD</p>
         </div>
     );
